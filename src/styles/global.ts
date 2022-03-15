@@ -30,6 +30,12 @@ export const GlobalStyle = createGlobalStyle`
 
   input {
     outline: none;
+    font-size: inherit;
+    color: inherit;
+
+    &::placeholder {
+      color: inherit;
+    }
   }
 
   ol, ul {
