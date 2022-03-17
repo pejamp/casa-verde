@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { Newsletter } from "../../components/Newsletter";
-import { Subtitle } from "../../components/Subtitle";
-import { Text } from "../../components/Text";
-import { Title } from "../../components/Title";
+import { Newsletter } from "../../components/Newsletter/styled";
+import { Subtitle } from "../../components/Subtitle/styled";
+import { Text } from "../../components/Text/styled";
+import { Title } from "../../components/Title/styled";
 
 const Wrapper = styled.div`
   max-width: 585px;
