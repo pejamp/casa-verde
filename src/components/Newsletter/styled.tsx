@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { useFormik } from "../../hooks/useFormik";
 
-const Wrapper = styled.div`
+const Wrapper = styled.form`
   display: flex;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   background-color: #FFFFFF;
@@ -42,10 +43,27 @@ interface NewsButtonProps {
 }
 
 export function Newsletter(props: NewsButtonProps) {
+  const formik = useFormik({
+    initialValues: {
+      userEmail: 'email@email.com',
+    }
+  });
+
   return (
-    <Wrapper>
-      <Input as={"input"} placeholder={"Insira seu e-mail"} />
-      <Button>Assinar newsletter</Button>
+    <Wrapper onSubmit={(event) => {
+      event.preventDefault();
+      console.log(formik.values);
+    }}>
+      <Input 
+        as={"input"} 
+        placeholder={"Insira seu e-mail"} 
+        type={"text"}
+        name={"userEmail"}
+        id={"userEmail"}
+        value={formik.values.userEmail}
+        onChange={formik.handleChange}
+      />
+      <Button type="submit">Assinar newsletter</Button>
     </Wrapper>
   );
 }
