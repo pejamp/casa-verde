@@ -11,13 +11,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-size: 1rem;
+    font-size: 16px;
     color: #909090;
     -webkit-font-smoothing: antialiased;
     line-height: 1;
 
-    background: url(/assets/images/linhas.png), url(/assets/images/background2.png) repeat, url(/assets/images/background.png) top;
-    background-position: center;
+    background: url(/assets/images/linhas.png), 
+    url(/assets/images/background-form.png) no-repeat top right,
+    url(/assets/images/background2.png) repeat, 
+    url(/assets/images/background.png) top;
   }
   
   body, input, textarea, button {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Title = styled.h1`
+export const Wrapper = styled.h1`
   font-family: "Elsie Swash Caps", sans-serif;
   font-size: 5.125rem;
   font-weight: 900;

@@ -1,34 +1,5 @@
-import styled from "styled-components";
 import { Logo } from "../../components/Logo";
-
-const Wrapper = styled.div`
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding-top: 10px;
-`;
-
-const List = styled.ul`
-  display: flex;
-  align-items: center;
-`;
-
-const Item = styled.li`
-  color: #202020;
-  font-weight: 700;
-
-  &::after {
-    content: "/";
-    margin: 0 13px;
-    color: #202020;
-  }
-
-  &:last-child {
-    &::after {
-      display: none;
-    }
-  }
-`;
+import { Item, List, Wrapper } from "./styled";
 
 export function Header() {
   return (

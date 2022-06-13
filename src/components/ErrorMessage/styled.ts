@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ErrorMessage = styled.span`
+export const Wrapper = styled.span`
   display: inline-block;
   font-size: 0.875rem;
   color: #FF1818;
