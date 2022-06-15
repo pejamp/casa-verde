@@ -1,7 +1,7 @@
 import { Wrapper } from "./styled";
 
-export function Title(props: { children: string }) {
+export function Title(props: { size?: "smaller" | "small", children: string }) {
   return (
-    <Wrapper>{props.children}</Wrapper>
+    <Wrapper size={props.size}>{props.children}</Wrapper>
   );
 }
