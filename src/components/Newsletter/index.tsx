@@ -1,11 +1,18 @@
+
 import { useFormik } from "../../hooks/useFormik";
 import { ErrorMessage } from "../ErrorMessage";
 import { ToastContainer, toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
 import 'react-toastify/dist/ReactToastify.css';
-import { Button, Input, Wrapper } from "./styled";
+import { Button, Input, Form } from "./styled";
 
 interface NewsButtonProps {
   userEmail: string;
+}
+
+const apikey = {
+  template: import.meta.env.VITE_TEMPLATE_ID,
+  user: import.meta.env.VITE_USER_ID,
 }
 
 export function Newsletter() {
@@ -40,13 +47,29 @@ export function Newsletter() {
     }
   });
 
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+
+    const { userEmail } = formik.values;
+
+    emailjs.sendForm('service_n2lt8yr', `${apikey.template}`, event.target, `${apikey.user}`)
+      .then((result) => {
+          if (result.status == 200) {
+            notify("Obrigado pela sua assinatura, você receberá nossas novidades no e-mail " + userEmail);
+          };
+      }, (error) => {
+          notify(error.text);
+      });
+
+    
+    console.log(userEmail);
+
+    event.target.reset();
+  }
+
   return (
     <>
-      <Wrapper onSubmit={(event) => {
-        event.preventDefault();
-        console.log(formik.values);
-        notify("Obrigado pela sua assinatura, você receberá nossas novidades no e-mail " + formik.values.userEmail)
-      }}>
+      <Form onSubmit={handleSubmit}>
         <Input 
           as={"input"} 
           placeholder={"Insira seu e-mail"} 
@@ -62,7 +85,7 @@ export function Newsletter() {
          disabled={formik.errors.userEmail || !formik.values.userEmail}
          active={formik.errors.userEmail || !formik.values.userEmail}
         >Assinar newsletter</Button>
-      </Wrapper>
+      </Form>
       {formik.touched.userEmail && formik.errors.userEmail && <ErrorMessage text={formik.errors.userEmail} />}
       <ToastContainer
         theme={"light"}

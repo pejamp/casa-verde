@@ -13,7 +13,6 @@ export function useFormik({
   const [touched, setTouchedFields] = useState({} as Props);
 
   useEffect(() => {
-    console.log("Alguém mexeu nos values", values);
     validateValues(values);
   }, [values])
 

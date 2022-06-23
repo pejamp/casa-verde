@@ -4,7 +4,7 @@ interface ButtonProps {
   active: boolean;
 }
 
-export const Wrapper = styled.form`
+export const Form = styled.form`
   display: flex;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   background-color: #FFFFFF;
