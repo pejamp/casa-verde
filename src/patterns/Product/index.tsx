@@ -2,15 +2,21 @@ import { Text } from "../../components/Text";
 import { Title } from "../../components/Title";
 import { Container, Content, Icon, Image, Link } from "./styled";
 
+interface ProductProps {
+  name: string;
+  image: string;
+  price: number;
+  order?: number;
+}
 
-export function Product() {
+export function Product(props: ProductProps) {
   return (
     <Container>
-      <Image src={"/assets/images/produto-01.png"} />
+      <Image src={props.image} />
       <Content>
-        <Title size="smaller">Ajuga reptans</Title>
-        <Text>R$ 20,00</Text>
-        <Link>
+        <Title size="smaller">{props.name}</Title>
+        <Text>R$ {props.price}</Text>
+        <Link href="#">
           Comprar
           <Icon />
         </Link>

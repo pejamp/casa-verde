@@ -6,9 +6,18 @@ import { Grid, Section, Wrapper } from "./styles/home"
 import { Title } from "./components/Title"
 import { Subtitle } from "./components/Subtitle"
 import { Product } from "./patterns/Product"
+import { ProductContext } from "./contexts/productsContext"
+import { useContext } from "react"
 
+interface ProductProps {
+  name: string;
+  image: string;
+  price: number;
+  order: number;
+}
 
 function App() {
+  const [products] = useContext(ProductContext);
 
   return (
     <>
@@ -20,12 +29,14 @@ function App() {
           <Subtitle>Conheça nossas</Subtitle>
           <Title>ofertas</Title>
           <Grid>
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
+            {products.map((product: ProductProps) => (
+              <Product 
+                key={product.order} 
+                name={product.name} 
+                image={product.image} 
+                price={product.price} 
+              />
+            ))}     
           </Grid>
         </Section>
       </Wrapper>

@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Ajuga Reptans",
+      "price": 20,
+      "image": "https://res.cloudinary.com/dsvcvkys8/image/upload/v1656341038/casaverde/produto-01_vusnxf.png",
+      "order": 0
+    },
+    {
+      "id": 2,
+      "name": "Cordyline fruticosa",
+      "price": 35,
+      "image": "https://res.cloudinary.com/dsvcvkys8/image/upload/v1656341038/casaverde/produto-02_hlqkiv.png",
+      "order": 3
+    },
+    {
+      "id": 3,
+      "name": "Crassula ovata",
+      "price": 23.2,
+      "image": "https://res.cloudinary.com/dsvcvkys8/image/upload/v1656341038/casaverde/produto-03_rlqjnc.png",
+      "order": 2
+    },
+    {
+      "id": 4,
+      "name": "Cyperus rotundus",
+      "price": 40,
+      "image": "https://res.cloudinary.com/dsvcvkys8/image/upload/v1656341038/casaverde/produto-04_hw2flc.png",
+      "order": 1
+    },
+    {
+      "id": 5,
+      "name": "Delairea odorata",
+      "price": 15,
+      "image": "https://res.cloudinary.com/dsvcvkys8/image/upload/v1656341038/casaverde/produto-05_vepbk1.png",
+      "order": 5
+    },
+    {
+      "id": 6,
+      "name": "Datura metel",
+      "price": 25,
+      "image": "https://res.cloudinary.com/dsvcvkys8/image/upload/v1656341038/casaverde/produto-06_y5pfbe.png",
+      "order": 4
+    }
+  ]
+}

@@ -29,6 +29,11 @@ export const Link = styled.a`
   align-items: center;
   padding-top: 1.5rem;
   gap: 1rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    filter: grayscale(1);
+  }
 `;
 
 export const Icon = styled.span`

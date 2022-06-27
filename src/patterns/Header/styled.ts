@@ -15,6 +15,7 @@ export const List = styled.ul`
 export const Item = styled.li`
   color: #202020;
   font-weight: 700;
+  transition: all 0.2s ease;
 
   &::after {
     content: "/";
@@ -26,5 +27,9 @@ export const Item = styled.li`
     &::after {
       display: none;
     }
+  }
+
+  &:hover {
+    color: #909090;
   }
 `;
