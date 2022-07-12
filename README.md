@@ -1,8 +1,6 @@
-- #Alura e #7DOC
-- #7DaysofReact
 <h1 align="center">
     <br>
-    <img src="/assets/logo.svg" width="260px" alt="logo casaverde">
+    <img src="./public/assets/logo.svg" width="260px" alt="logo casaverde">
 </h1>
 
 <h4 align="center">
@@ -10,16 +8,16 @@
 </h4>
 
 <p align="center">
-    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/pejamp/alurageek-alurachallenge?color=6AD1FF&style=for-the-badge&labelColor=0A2533">
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/pejamp/alurageek-alurachallenge?color=6AD1FF&style=for-the-badge&labelColor=0A2533">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pejamp/alurageek-alurachallenge?color=6AD1FF&style=for-the-badge&labelColor=0A2533">
+    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/pejamp/casa-verde?color=8dce97&style=for-the-badge&labelColor=ffcb47">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/pejamp/casa-verde?color=8dce97&style=for-the-badge&labelColor=ffcb47">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pejamp/casa-verde?color=8dce97&style=for-the-badge&labelColor=ffcb47">
 </p>
 
 <h1 align="center">
-    <img alt="CasaVerde" src="/assets/Capa.png" />
+    <img alt="CasaVerde" src="./public/assets/Capa.png" />
 </h1>
 
-# CasaVerde <img src="/assets/small-logo.svg" width="28" alt="logo icon">
+# CasaVerde <img src="./public/assets/small-logo.svg" width="28" alt="logo icon">
 Desafio elaborado pela Alura com o intuito de nos desafiar a desenvolver um e-commerce de plantas com várias funcionalidades.
 
 ## 🧪 Tecnologias
@@ -38,8 +36,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
-$ git clone https://github.com/pejamp/alurageek-alurachallenge
-$ cd alurageek-alurachallenge
+$ git clone https://github.com/pejamp/casa-verde
+$ cd casa-verde
 ```
 
 Para iniciá-lo, siga os passos abaixo:
