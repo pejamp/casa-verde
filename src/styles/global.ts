@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  :root {}
 
   * {
     margin: 0;
@@ -22,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     url(/assets/images/background.png) top;
   }
   
-  body, input, textarea, button {
+  body, input, textarea, button, select {
     font-family: "Montserrat", sans-serif;
   }
 

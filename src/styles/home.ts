@@ -25,3 +25,12 @@ export const Grid = styled.div`
   grid-template-columns: repeat(3, 379px);
   gap: 2rem;
 `;
+
+export const Flex = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 1rem;
+  gap: 1rem;
+`;

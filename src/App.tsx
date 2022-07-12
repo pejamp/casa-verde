@@ -3,13 +3,15 @@ import { GlobalStyle } from "./styles/global"
 import { Card } from "./patterns/Card"
 import { Header } from "./patterns/Header"
 import { Subscription } from "./patterns/Subscription"
-import { Grid, Section, Wrapper } from "./styles/home"
+import { Flex, Grid, Section, Wrapper } from "./styles/home"
 import { Title } from "./components/Title"
 import { Subtitle } from "./components/Subtitle"
 import { Product } from "./patterns/Product"
 import { ProductContext } from "./contexts/productsContext"
 
 import data from '../db.json';
+import { Select } from "./components/Select"
+import { FilterInput } from "./components/FilterInput"
 
 type Products = typeof data;
 
@@ -25,6 +27,7 @@ function App() {
   const [products] = useContext(ProductContext);
   const [sortType, setSortType] = useState(null as any);
   const [sortedProducts, setSortedProducts] = useState([] as any);
+  const [filterValue, setFilterValue] = useState(0);
   const [loading, setLoading] = useState(true);
 
   function sortArray(type: any) {
@@ -52,7 +55,8 @@ function App() {
   }
 
   function filterArray(rangeValue: any) {
-    let filtered = [...products].filter((item) => item.price < rangeValue.target.value);
+    setFilterValue(rangeValue.target.value);
+    let filtered = [...products].filter((item) => item.price <= rangeValue.target.value);
     setSortedProducts(filtered);
   }
 
@@ -76,17 +80,10 @@ function App() {
         <Section>
           <Subtitle>Conheça nossas</Subtitle>
           <Title>plantas</Title>
-          <div>
-            <select onChange={(e) => setSortType(e.target.value)}>
-              <option>select</option>
-              <option value="price-ascending">menor - maior</option>
-              <option value="price-descending">maior - menor</option>
-              <option value="name-ascending">A - Z</option>
-              <option value="name-descending">Z - A</option>
-            </select>
-            <input type="range" name="price" onChange={filterArray} />
-            <label htmlFor="price"></label>
-          </div>
+          <Flex>
+            <Select onChange={(e) => setSortType(e.target.value)} />
+            <FilterInput value={filterValue} onChange={filterArray} />
+          </Flex>
           <Grid>
             {loading ? (
               <span>Loading Products...</span>
